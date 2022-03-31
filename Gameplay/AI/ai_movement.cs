@@ -15,7 +15,7 @@ public class ai_movement : MonoBehaviour
     public float maxSpeed = 4;
     public float acceleration = 10;
     public float speedMultiplier = 1.0f;
-    [Tooltip("Hur nära i enheter som aktören måsta vara till sitt vandringsmål före de ser det som passerat")][Min(0.1f)] public float targetRadius = 1;
+    [Tooltip("How close an AI has to get to its wander target before it's considered visited.")][Min(0.1f)] public float targetRadius = 1;
 
     //--Internals
     [HideInInspector]public Vector2 walkingTarget;

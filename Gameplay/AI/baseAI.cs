@@ -14,10 +14,10 @@ public class baseAI : combatActor
     public static List<aiSound> everySound = new List<aiSound>();
 
     //--General settings
-    [Tooltip("Hur mycket skada AIn måste ta per droppe blod")] public float bleedThreshold = 2;
-    [Tooltip("Hur mycket skada fienden måste ta före den går in i smärtläge")] public float painTolerance = 20;
-    [Tooltip("Hur många sekunder en fiende avbryter sitt beteende på grund av smärta")] public float painTime = 0.5f;
-    [Tooltip("Hur mycket skada en AI måste ta från samma attackerare i rad för att byta mål")] public float threatResistance = 10.0f;
+    [Tooltip("Damage required per drop of blood.")] public float bleedThreshold = 2;
+    [Tooltip("Damage required to trigger pain.")] public float painTolerance = 20;
+    [Tooltip("How long an enemy remains in pain.")] public float painTime = 0.5f;
+    [Tooltip("Damage required to trigger infighting.")] public float threatResistance = 10.0f;
     public int updatesPerSecond = 2;//Maybe unnecessary limit to how often an AI looks or listens while idle
 
     //--Components
@@ -28,14 +28,14 @@ public class baseAI : combatActor
 
     //--Sight and hearing
     public bool wallhacks = false;//If true the enemy can see through walls
-    [Tooltip("Hur långt AIn kan se")] public float perception = 10;
+    [Tooltip("How far an AI can see.")] public float perception = 10;
     //AI vision range, perception <= 0 -> blind
     public float fov = 90;
-    [Tooltip("Hur långt AIn kan höra")] public float hearing = 10;
+    [Tooltip("How far an AI can hear.")] public float hearing = 10;
     //Hearing range, this is multiplied by each sound's volume, hearing <= 0 -> deaf
-    [Tooltip("Hur stor kon AIn väljer från för ljud")] public float hearingAngle = 10;
-    [Tooltip("Hur nära målet en AI kan peka ut ett ljud")] public float hearingPrecision = 1;
-    [Tooltip("Hur mycket väggar dämpar ljud, värdet multipliceras med sträckan som går genom en vägg.")] public float wallSoundDampening = 2;
+    [Tooltip("Within how many angles an AI can pinpoint sound location.")] public float hearingAngle = 10;
+    [Tooltip("Within how far an AI can pinpoint sound location.")] public float hearingPrecision = 1;
+    [Tooltip("How much walls dampen sound this AI listens to.")] public float wallSoundDampening = 2;
     public float attentionSpan = 0.5f;
     //What a sound's interest value is mulitplied by every time Listen() is called
 

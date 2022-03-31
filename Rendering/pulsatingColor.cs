@@ -10,7 +10,7 @@ public class pulsatingColor : MonoBehaviour
 
     const float halfPi = Mathf.PI / 2f;
     SpriteRenderer spr;
-    [Range(0.0f, 1.0f)][Tooltip("Hur mycket mörkare färgen kan bli medan den pulserar")] public float pulseIntensity = 0.3f;
+    [Range(0.0f, 1.0f)][Tooltip("Distance between brightest and dimmest color.")] public float pulseIntensity = 0.3f;
     public float pulseSpeed = 1.0f;
     [HideInInspector] public Color cCopy = Color.white;
     public bool isPaused = false;

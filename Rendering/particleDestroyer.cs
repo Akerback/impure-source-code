@@ -8,7 +8,7 @@ public class particleDestroyer : MonoBehaviour
 
     public ParticleSystem part;
     public float timeToDie = -1;
-    [Tooltip("Om större än noll så förstörs partikelsystemet efter så här många sekunder.")] public float duration = -1;
+    [Tooltip("If greater than 0 this object will be destroyed after this many seconds.")] public float duration = -1;
     [HideInInspector] public baseAI master;
 
     void Start() 
